@@ -1,15 +1,13 @@
+require('dotenv').config();
 const axios = require("axios");
-const minimist = require("minimist");
 
-const args = minimist(process.argv.slice(2));
-
-const pullNumber = args.PR_NUMBER
-
-const token = "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";
+// env variables
+const pullNumber = process.env.PR_NUMBEER;
+const token = process.env.GITHUB_TOKEN
 
 const url = `https://api.github.com/repos/littlevegasdavids/todo-hatch-2024/issues/${pullNumber}/comments`;
 
-const testComment = "Second comment from script";
+const testComment = "Comment from script";
 
 const headers = {
   Authorization: `token ${token}`,
@@ -22,6 +20,7 @@ const data = {
 
 async function postComment() {
   if(!pullNumber){
+    console.log(pullNumber)
     console.error("PR_NUMBER not defined in CLI. Please provide a pull request number");
     return
   }
