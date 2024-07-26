@@ -1,10 +1,8 @@
-//Test comment
-
 require('dotenv').config();
 const axios = require("axios");
 
 // env variables
-const pullNumber = process.env.PR_NUMBEER;
+const pullNumber = process.env.PR_NUMBER;
 const token = process.env.GITHUB_TOKEN
 
 const url = `https://api.github.com/repos/littlevegasdavids/todo-hatch-2024/issues/${pullNumber}/comments`;
