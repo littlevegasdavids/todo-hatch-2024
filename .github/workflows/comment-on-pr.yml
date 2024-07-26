@@ -24,4 +24,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PR_NUMBER: ${{ github.event.number }}
-      run: node scripts/commentPR.js
+      run: node script/commentPR.js
