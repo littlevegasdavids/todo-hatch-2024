@@ -1,5 +1,3 @@
-//Test comment on PR
-
 require('dotenv').config();
 const axios = require("axios");
 
