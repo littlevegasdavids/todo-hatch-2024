@@ -28,6 +28,6 @@ jobs:
 
       - name: Run comment script
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
           PR_NUMBER: ${{ github.event.number }}
         run: node script/commentPR.js
