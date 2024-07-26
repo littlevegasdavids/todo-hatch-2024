@@ -11,7 +11,7 @@ permissions:
     issues: write 
 
 jobs:
-  comment:
+  CommentOnPR:
     runs-on: ubuntu-latest
 
     steps:
